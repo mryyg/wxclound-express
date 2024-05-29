@@ -16,7 +16,12 @@ app.get("/", async (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// 更新计数
+// test
+app.get("/api/test", async (req, res) => {
+  res.send("test");
+});
+
+// 聊天
 app.post("/api/chat", async (req, res) => {
   const { messages } = req.body;
   try {
