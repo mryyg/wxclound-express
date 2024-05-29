@@ -17,7 +17,7 @@ app.get("/", async (req, res) => {
 });
 
 // 更新计数
-app.post("/api/opneRouter", async (req, res) => {
+app.post("/api/chat", async (req, res) => {
   const { messages } = req.body;
   try {
     const streamData = await fetch(
@@ -42,6 +42,8 @@ app.post("/api/opneRouter", async (req, res) => {
     // console.log(streamData);
     res.writeHead(200, {
       "Content-Type": "text/event-stream",
+      "access-control-allow-origin": "*",
+      "access-control-allow-methods": "POST",
     });
 
     await (async () => {
