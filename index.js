@@ -2,6 +2,7 @@ const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
+const fetch = require("node-fetch");
 
 const logger = morgan("tiny");
 
