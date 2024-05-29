@@ -56,7 +56,9 @@ app.post("/api/chat", async (req, res) => {
     //   code: 200,
     //   data: 11,
     // });
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 // 小程序调用，获取微信 Open ID
